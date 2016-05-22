@@ -1,0 +1,75 @@
+﻿<Page
+    x:Class="VacationExplorer.CopyrightInfoPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VacationExplorer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <EntranceNavigationTransitionInfo/>
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                Margin="10">
+        <TextBlock Text="Copyright Info" 
+                   Margin="0,0,0,5"
+                   FontSize="24"
+                   Grid.Row="1"/>
+        <TextBlock Text=" Vacation Explorer App © Dy Developers" 
+                   Margin="0,0,0,10"
+                   TextWrapping="WrapWholeWords"
+                   FontSize="16"
+                   Grid.Row="1"/>
+        <TextBlock Text=" • Toronto Image © Benson Kua" 
+                   Margin="0,10,0,5"
+                   TextWrapping="WrapWholeWords"
+                   FontSize="16"
+                   Grid.Row="1"/>
+        <TextBlock Text=" • London Image © bigvb" 
+                   Margin="0,0,0,5"
+                   TextWrapping="WrapWholeWords"
+                   FontSize="16"
+                   Grid.Row="1"/>
+        <TextBlock Text=" • Singapore Image © Mac Qin" 
+                   Margin="0,0,0,5"
+                   TextWrapping="WrapWholeWords"
+                   FontSize="16"
+                   Grid.Row="1"/>
+        <TextBlock Text=" • Paris Image © Thirsty Robot" 
+                   Margin="0,0,0,5"
+                   TextWrapping="WrapWholeWords"
+                   FontSize="16"
+                   Grid.Row="1"/>
+        <TextBlock Text=" • Arts and Entertainment Image © FromTheNorth" 
+                   Margin="0,0,0,5"
+                   TextWrapping="WrapWholeWords"
+                   FontSize="16"
+                   Grid.Row="1"/>
+        <TextBlock Text=" • Outdoors and Recreation Image © Yurly Akopov" 
+                   Margin="0,0,0,5"
+                   TextWrapping="WrapWholeWords"
+                   FontSize="16"
+                   Grid.Row="1"/>
+        <TextBlock Text=" • Sights Image © Jeff Wallace" 
+                   Margin="0,0,0,10"
+                   TextWrapping="WrapWholeWords"
+                   FontSize="16"
+                   Grid.Row="1"/>
+        <TextBlock Text=" • Foursquare Logo © Foursquare" 
+                   Margin="0,10,0,5"
+                   TextWrapping="WrapWholeWords"
+                   FontSize="16"
+                   Grid.Row="1"/>
+        <TextBlock Text=" • Skyscanner Logo © Skyscanner Ltd" 
+                   Margin="0,0,0,10"
+                   TextWrapping="WrapWholeWords"
+                   FontSize="16"
+                   Grid.Row="1"/>
+    </StackPanel>
+</Page>

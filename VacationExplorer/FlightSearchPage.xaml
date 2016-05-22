@@ -1,0 +1,145 @@
+﻿<Page
+    x:Class="VacationExplorer.FlightSearchPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VacationExplorer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <SlideNavigationTransitionInfo/>
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+          Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Flight Search"
+                   Margin="0,0,0,10"
+                   FontSize="18"
+                   Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="TextBlockError" 
+                   Foreground="Red"
+                   Text="An error occurred!"
+                   Margin="0,0,0,10"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="2"
+                   Visibility="Collapsed"
+                   TextWrapping="WrapWholeWords"/>
+        <StackPanel Grid.Row="2"
+                    Margin="0,0,5,5">
+            <TextBlock Text="Origin"/>
+            <AutoSuggestBox x:Name="AutoSuggestBoxOrigin"
+                            TextChanged="AutoSuggestBoxOrigin_TextChanged"
+                            SuggestionChosen="AutoSuggestBoxOrigin_SuggestionChosen"
+                            TextMemberPath="PlaceName"
+                            DisplayMemberPath="PlaceName"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="5,0,0,5">
+            <TextBlock Text="Destination"/>
+            <AutoSuggestBox x:Name="AutoSuggestBoxDestination"
+                            TextChanged="AutoSuggestBoxDestination_TextChanged"
+                            SuggestionChosen="AutoSuggestBoxDestination_SuggestionChosen"
+                            TextMemberPath="PlaceName"
+                            DisplayMemberPath="PlaceName"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3"
+                    Margin="0,5,5,5">
+            <TextBlock Text="Departure Date"/>
+            <CalendarDatePicker x:Name="DatePickerDeparture"
+                                HorizontalAlignment="Stretch"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3"
+                    Grid.Column="1"
+                    Margin="5,5,0,5">
+            <TextBlock Text="Return Date"/>
+            <CalendarDatePicker x:Name="DatePickerReturn"
+                                HorizontalAlignment="Stretch"/>
+        </StackPanel>
+        <Grid Grid.Row="4"
+              Grid.RowSpan="2"
+              Margin="0,5,5,5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Number of Passengers"
+                       Grid.ColumnSpan="2"/>
+            <TextBlock Text="Adult:"
+                       VerticalAlignment="Center"
+                       Margin="10,0,10,0"
+                       Grid.Row="1"/>
+            <ComboBox x:Name="ComboBoxAdult"
+                      Grid.Row="1"
+                      Grid.Column="1"
+                      Margin="0,5,0,0"
+                      SelectionChanged="ComboBoxAdult_SelectionChanged"/>
+            <TextBlock Text="Child:"
+                       VerticalAlignment="Center"
+                       Margin="10,0,10,0"
+                       Grid.Row="2"/>
+            <ComboBox x:Name="ComboBoxChild"
+                      Grid.Row="2"
+                      Grid.Column="1"
+                      Margin="0,5,0,0"/>
+            <TextBlock Text="Infant:"
+                       VerticalAlignment="Center"
+                       Margin="10,0,10,0"
+                       Grid.Row="3"/>
+            <ComboBox x:Name="ComboBoxInfant"
+                      Grid.Row="3"
+                      Grid.Column="1"
+                      Margin="0,5,0,0"/>
+        </Grid>
+        <StackPanel Grid.Row="4"
+                    Grid.Column="1"
+                    Margin="5,5,0,0">
+            <TextBlock Text="Cabin Class"/>
+            <ComboBox x:Name="ComboBoxCabinClass"
+                      DisplayMemberPath="display"
+                      SelectedValuePath="display"
+                      HorizontalAlignment="Stretch"/>
+        </StackPanel>
+        <StackPanel Grid.Row="5"
+                    Grid.Column="1"
+                    Margin="5,0,0,5">
+            <TextBlock Text="Currency"/>
+            <ComboBox x:Name="ComboBoxCurrency"
+                      DisplayMemberPath="display"
+                      SelectedValuePath="display"
+                      HorizontalAlignment="Stretch"/>
+        </StackPanel>
+        <Button x:Name="ButtonSearch"
+                Grid.Row="6"
+                Grid.ColumnSpan="2"
+                Margin="0,10,0,0"
+                Content="Search for Flights!"
+                HorizontalAlignment="Center"
+                Click="ButtonSearch_Click"/>
+    </Grid>
+</Page>
