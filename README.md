@@ -8,5 +8,3 @@
 <img src=/Screenshots/pc5.PNG height=300 />
 <img src=/Screenshots/pc6.PNG height=300 />
 <img src=/Screenshots/pc7.PNG height=300 />
-
-Available on the Windows App Store: https://www.microsoft.com/store/apps/9nblggh4vfqz
